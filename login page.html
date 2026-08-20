@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VkFashions | Login</title>
+</head>
+<body style="background-image: url(./Images/clobg.jpg); height: 100vh; width: 100%; margin: 0;">
+    <div style="height: 100px; width: 100%;"></div>
+    
+    <div style="height: 500px; width: 100%; display: flex; justify-content: center;">
+        <div style="height: 500px; width: 60%; display: flex; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            
+            <div style="height: 100%; width: 50%; background-image: url(./Images/fashlog.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+            </div>
+            
+            <div style="height: 100%; width: 50%; background-color: rgb(121, 14, 14); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h2 style="text-align: center; color: white; margin-bottom: 30px;">
+                    YOU'RE WELCOME!<br>TO FASHION WORLD!
+                </h2>
+                
+                <form id="login-form" align="center" style="width: 100%;">
+                    <input type="text" id="username" placeholder="User Name/Email/Number" required style="height: 35px; width: 70%; margin-bottom: 15px; border-radius: 5px; border: none; padding-left: 10px;">
+                    <br>
+                    <input type="password" id="password" placeholder="Password" required style="height: 35px; width: 70%; margin-bottom: 20px; border-radius: 5px; border: none; padding-left: 10px;">
+                    <br>
+                    <input type="submit" value="Login" style="height: 40px; width: 70%; background-color: orange; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; margin-bottom: 10px;">
+                    <br>
+                    <input type="reset" value="Reset" style="height: 40px; width: 70%; background-color: transparent; border: 1px solid orange; color: orange; border-radius: 5px; cursor: pointer; font-weight: bold; margin-bottom: 15px;">
+                    <br>
+                    
+                    <a href="forget.html" style="color: white; text-decoration: none; font-size: 14px; margin-right: 15px;" target="_blank">Forget Password?</a>
+                    <a href="registervkf.html" style="color: white; text-decoration: none; font-size: 14px;" target="_blank">Register!</a>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            // 1. Prevent the page from refreshing when the user clicks submit
+            event.preventDefault(); 
+            
+            // 2. Grab the value the user typed into the username box
+            const usernameInput = document.getElementById('username').value;
+            
+            // 3. Save it to LocalStorage so the whole website remembers who is logged in
+            localStorage.setItem('vkUser', usernameInput);
+            
+            // 4. Show a success message
+            alert('Welcome back, ' + usernameInput + '! Redirecting to the store...');
+            
+            // 5. Send the user back to your main page (ecacrt.html)
+            window.location.href = 'ecacrt.html'; 
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VkFashions | Forget Password</title>
+</head>
+<body style="background-image: url(./Images/clobg.jpg); height: 100vh; width: 100%; margin: 0; font-family: sans-serif;">
+    <div style="height: 100px; width: 100%;"></div>
+    
+    <div style="height: 500px; width: 100%; display: flex; justify-content: center;">
+        <div style="height: 500px; width: 60%; display: flex; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            
+            <div style="height: 100%; width: 50%; background-image: url(./Images/fashlog.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+            </div>
+            
+            <div style="height: 100%; width: 50%; background-color: rgb(121, 14, 14); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h2 style="text-align: center; color: white; margin-bottom: 20px;">FORGET PASSWORD?</h2>
+                
+                <form id="forget-form" align="center" style="width: 100%;">
+                    <input type="text" placeholder="Mobile Number/Email/User Name" required style="height: 35px; width: 70%; margin-bottom: 15px; border-radius: 5px; border: none; padding-left: 10px;">
+                    <br>
+                    <input type="password" placeholder="New Password" required style="height: 35px; width: 70%; margin-bottom: 20px; border-radius: 5px; border: none; padding-left: 10px;">
+                    <br>
+                    <input type="submit" value="Reset Password" style="height: 40px; width: 70%; background-color: orange; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; margin-bottom: 15px;">
+                    <br>
+                    
+                    <a href="login page.html" style="color: white; text-decoration: none; font-size: 14px;">Back to Login</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('forget-form').addEventListener('submit', function(event) {
+            // Stop page from refreshing
+            event.preventDefault(); 
+            
+            // Show a success message
+            alert('Password reset successfully! Please log in with your new password.');
+            
+            // Redirect them to the login page
+            window.location.href = 'login page.html';
+        });
+    </script>
+</body>
+</html>
